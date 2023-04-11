@@ -1,0 +1,19 @@
+---
+- name: start docker
+  remote_user: "{{ remote_user }}"
+  service:
+    name: docker
+    state: started
+  become: true
+  tags:
+    - docker
+
+# - name: start docker-compose
+#   remote_user: "{{ remote_user }}"
+#   service:
+#     name: docker-compose
+#     state: started
+#   become: true
+#   tags:
+#     - docker
+...
